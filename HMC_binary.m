@@ -53,7 +53,7 @@ Xs(:,1)=initial_X;
 
 i=2;
 while (i <= L)
-i;
+i
 stop=0;   
 j=0;
 V= normrnd(0,1, d,1);   % initial velocity

@@ -1,7 +1,7 @@
 % Demo for the augmented-variable HMC sampler introduced in the NIPS 2013 paper 
 % "Auxiliary-variable exact Hamiltonian Monte Carlo samplers for binary distributions" by Ari Pakman and Liam Paninski 
 
-
+clear
 d =400;
 temp =.45;  % temperature for the 1D Ising model
 
@@ -13,14 +13,14 @@ L=500;          % number of samples
 
 % run the Metropolis sampler
 tic
-[IsGs, IsGL1, trials, flips] = MetroGibbs_binary(is1,L, d*t);
+[IsGs, IsGL1]  = MetroGibbs_binary(is1,L, d*t);
 toc
 
 T=t*pi;  % time to run each HMC iteration
 
 % run the HMC sampler (with Gaussian augmentation)
 tic
-[IsHs, IsHL1, hits, crosses] = HMC_binary(is1,t*pi,L);
+[IsHs, IsHL1] = HMC_binary(is1,t*pi,L);
 toc
 
 
