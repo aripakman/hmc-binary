@@ -3,7 +3,8 @@
 % Demo for the augmented-variable HMC sampler introduced in the NIPS 2013 paper 
 % "Auxiliary-variable exact Hamiltonian Monte Carlo samplers for binary distributions" by Ari Pakman and Liam Paninski 
 %
-% This MATLAB implementation reporoduces one of the examples of the paper. See also the C++ implementation.
+% This MATLAB implementation reproduces one of the examples of the paper.
+% See also the C++ implementation with mex function.
 
 clear
 addpath('src_matlab')

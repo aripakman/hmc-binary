@@ -10,7 +10,7 @@
 %
 % log p(S|r,M) = -sum_i r(i)*S(i) - sum_{i<j} M(i,j)*S(i)*S(j)  + const  
 %
-% The sampler is called as 
+% with S(i) = +1 or -1. The sampler is called as 
 % 
 % [X,ll] = hmc_binary(M,r,L,P,last_y, seed);
 
@@ -32,8 +32,7 @@
 % S = sign(y). The sampler requires initial values for y in the
 % variable last_y. When the function returns, last_y will contain the last 
 % values of y (last_y is passed by reference). 
-% This is useful when sampling of the binary variables 
-% is part of a Gibbs sampling scheme.
+% This is useful when the binary variables are part of a Gibbs sampling scheme.
 
 
 %% Compile the source code for the mex function
